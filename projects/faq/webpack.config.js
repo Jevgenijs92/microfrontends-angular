@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'faq',
 
   exposes: {
-    './Component': './projects/faq/src/app/app.component.ts',
+    'faq': './projects/faq/src/app/app-routing.module.ts',
   },
 
   shared: {

@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ROUTES } from '@angular/router';
+import { createRoutes } from './util/route-factory';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ROUTES,
+      useFactory: () => createRoutes(),
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
