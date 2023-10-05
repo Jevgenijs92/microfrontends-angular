@@ -3,6 +3,7 @@
     "remoteEntry": "http://localhost:4201/remoteEntry.js",
     "exposedModule": "faq",
     "route": "faq",
-    "routeConfigName": "AppRoutingModule"
+    "routeConfigName": "AppRoutingModule",
+    "displayName": "FAQ Page"
   }
 }

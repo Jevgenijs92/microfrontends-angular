@@ -15,3 +15,12 @@ export function createRoutes(): Routes {
     }
   });
 }
+
+export function createNavigationNodes(): { href: string; label: string }[] {
+  return Object.entries(getManifest<CustomManifest>()).map(([_, value]) => {
+    return {
+      href: value.route,
+      label: value.displayName
+    }
+  });
+}
