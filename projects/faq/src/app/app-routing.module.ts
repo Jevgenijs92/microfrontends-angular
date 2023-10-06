@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FaqAppComponent } from './faq-app.component';
+import { FaqDetailsComponent } from './faq-details/faq-details.component';
+import { FaqListComponent } from './faq-list/faq-list.component';
 
 export const appRoutes: Routes = [
   {
     path: '',
-    component: FaqAppComponent,
+    component: FaqListComponent,
   },
+  {
+    path: ':id',
+    component: FaqDetailsComponent,
+  }
 ];
 
 @NgModule({

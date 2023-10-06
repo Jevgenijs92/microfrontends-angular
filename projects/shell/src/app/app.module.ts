@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ROUTES } from '@angular/router';
 import { createNavigationNodes, createRoutes } from './util/route-factory';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +19,7 @@ import { createNavigationNodes, createRoutes } from './util/route-factory';
   providers: [
     {
       provide: ROUTES,
-      useFactory: () => createRoutes(),
+      useFactory: () => [...createRoutes(), { path: '**', redirectTo: '' }],
       multi: true,
     },
     {

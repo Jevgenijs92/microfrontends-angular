@@ -5,5 +5,12 @@
     "route": "faq",
     "routeConfigName": "AppRoutingModule",
     "displayName": "FAQ Page"
+  },
+  "equipment": {
+    "remoteEntry": "http://localhost:4202/remoteEntry.js",
+    "exposedModule": "equipment",
+    "route": "equipment",
+    "routeConfigName": "AppRoutingModule",
+    "displayName": "Equipment"
   }
 }

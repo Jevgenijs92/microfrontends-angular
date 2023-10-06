@@ -1,3 +1,14 @@
-<div>Shell Application</div>
-<a [routerLink]="node.href" *ngFor="let node of navigationNodes">{{ node.label }}</a>
-<router-outlet></router-outlet>
+<div class="toolbar"><a routerLink="/">Shell Application</a></div>
+<div class="main">
+    <div class="navigation">
+        <ul>
+            <li *ngFor="let node of navigationNodes">
+                <a [routerLink]="node.href">{{ node.label }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
