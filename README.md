@@ -26,3 +26,6 @@ The route to the remote app. This is the route that will be used to lazy load th
 The name of the routing module for the remote app. This is the name of the module that will be used to lazy load the remote app.
 
 
+# Useful commands
+ng add @angular-architects/module-federation --project=equipment --type=dynamic-host
+ng add @angular-architects/module-federation --project=equipment --type=remote
